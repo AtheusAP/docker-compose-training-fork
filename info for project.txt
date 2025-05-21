@@ -1,0 +1,8 @@
+PHP веб-страница: http://localhost:8080
+
+phpMyAdmin: http://localhost:8081
+
+pgAdmin: http://localhost:8082
+
+pgAdmin(Email: admin@admin.com  Пароль: admin)
+
