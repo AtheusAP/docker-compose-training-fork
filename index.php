@@ -8,6 +8,7 @@
     <?php
     try {
         $pdo = new PDO("mysql:host=mysql;dbname=mydb", "user", "pass");
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         foreach($pdo->query("SELECT * FROM users") as $row) {
             echo $row['id'] . ": " . $row['name'] . "<br>";
         }
@@ -20,6 +21,7 @@
     <?php
     try {
         $pdo = new PDO("pgsql:host=postgres;dbname=pgdb", "pguser", "pgpass");
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         foreach($pdo->query("SELECT * FROM employees") as $row) {
             echo $row['id'] . ": " . $row['name'] . "<br>";
         }
