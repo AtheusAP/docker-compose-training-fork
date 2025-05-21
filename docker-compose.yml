@@ -37,6 +37,22 @@ services:
             MYSQL_PASSWORD: test
             MYSQL_ROOT_PASSWORD: test
 
-            
+# для pgSQL            
+    postgres:
+        image: postgres:12
+        environment:
+            POSTGRES_DB: myPgDb
+            POSTGRES_USER: pguser
+            POSTGRES_PASSWORD: pgtest
+        ports:
+            - "5432:5432"
+        volumes:
+            - ./pgdump:/docker-entrypoint-initdb.d
+            - pg_persistent:/var/lib/postgresql/data
+        networks:
+            - default
+
+# pg для волюмс            
 volumes:
     persistent:
+    pg_persistent:
