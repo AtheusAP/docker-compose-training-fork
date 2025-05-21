@@ -1,3 +1,5 @@
-FROM php:7.0.30-apache
-RUN docker-php-ext-install mysqli pdo pdo_mysql pdo_pgsql
-# добавил pdo pdo_mysql pdo_pgsql
+FROM php:8.2-apache
+
+RUN docker-php-ext-install pdo pdo_mysql pdo_pgsql
+
+COPY index.php /var/www/html/index.php
