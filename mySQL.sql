@@ -3,4 +3,4 @@ CREATE TABLE IF NOT EXISTS employees (
     name VARCHAR(100)
 );
 
-INSERT INTO employees (name) VALUES ('David'), ('Eve'), ('Frank');
+INSERT INTO employees (name) VALUES ('Sara'), ('Artur'), ('James');
